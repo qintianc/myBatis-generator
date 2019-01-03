@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.InterestRecordPolicyMapper">
+  <resultMap id="BaseResultMap" type="model.InterestRecordPolicy">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="RECORD_ID" jdbcType="DECIMAL" property="recordId" />
+    <result column="APPLICANT_ID_TYPE" jdbcType="VARCHAR" property="applicantIdType" />
+    <result column="APPLICANT_ID_NUM" jdbcType="VARCHAR" property="applicantIdNum" />
+    <result column="INSURED_ID_TYPE" jdbcType="VARCHAR" property="insuredIdType" />
+    <result column="INSURED_ID_NUM" jdbcType="VARCHAR" property="insuredIdNum" />
+    <result column="AGENT_CODE" jdbcType="VARCHAR" property="agentCode" />
+    <result column="AGENT_NAME" jdbcType="VARCHAR" property="agentName" />
+    <result column="APPLICANT_NAME" jdbcType="VARCHAR" property="applicantName" />
+    <result column="INSURED_NAME" jdbcType="VARCHAR" property="insuredName" />
+    <result column="SELL_CHANNEL" jdbcType="VARCHAR" property="sellChannel" />
+    <result column="POLICY_NO" jdbcType="VARCHAR" property="policyNo" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from T_LX_INTEREST_RECORD_POLICY
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="model.InterestRecordPolicy">
+    insert into T_LX_INTEREST_RECORD_POLICY (ID, RECORD_ID, APPLICANT_ID_TYPE, 
+      APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+      AGENT_CODE, AGENT_NAME, APPLICANT_NAME, 
+      INSURED_NAME, SELL_CHANNEL, POLICY_NO
+      )
+    values (#{id,jdbcType=VARCHAR}, #{recordId,jdbcType=DECIMAL}, #{applicantIdType,jdbcType=VARCHAR}, 
+      #{applicantIdNum,jdbcType=VARCHAR}, #{insuredIdType,jdbcType=VARCHAR}, #{insuredIdNum,jdbcType=VARCHAR}, 
+      #{agentCode,jdbcType=VARCHAR}, #{agentName,jdbcType=VARCHAR}, #{applicantName,jdbcType=VARCHAR}, 
+      #{insuredName,jdbcType=VARCHAR}, #{sellChannel,jdbcType=VARCHAR}, #{policyNo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="model.InterestRecordPolicy">
+    update T_LX_INTEREST_RECORD_POLICY
+    set RECORD_ID = #{recordId,jdbcType=DECIMAL},
+      APPLICANT_ID_TYPE = #{applicantIdType,jdbcType=VARCHAR},
+      APPLICANT_ID_NUM = #{applicantIdNum,jdbcType=VARCHAR},
+      INSURED_ID_TYPE = #{insuredIdType,jdbcType=VARCHAR},
+      INSURED_ID_NUM = #{insuredIdNum,jdbcType=VARCHAR},
+      AGENT_CODE = #{agentCode,jdbcType=VARCHAR},
+      AGENT_NAME = #{agentName,jdbcType=VARCHAR},
+      APPLICANT_NAME = #{applicantName,jdbcType=VARCHAR},
+      INSURED_NAME = #{insuredName,jdbcType=VARCHAR},
+      SELL_CHANNEL = #{sellChannel,jdbcType=VARCHAR},
+      POLICY_NO = #{policyNo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select ID, RECORD_ID, APPLICANT_ID_TYPE, APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+    AGENT_CODE, AGENT_NAME, APPLICANT_NAME, INSURED_NAME, SELL_CHANNEL, POLICY_NO
+    from T_LX_INTEREST_RECORD_POLICY
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, RECORD_ID, APPLICANT_ID_TYPE, APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+    AGENT_CODE, AGENT_NAME, APPLICANT_NAME, INSURED_NAME, SELL_CHANNEL, POLICY_NO
+    from T_LX_INTEREST_RECORD_POLICY
+  </select>
+  <resultMap id="BaseResultMap" type="model.InterestRecordPolicy">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="RECORD_ID" jdbcType="DECIMAL" property="recordId" />
+    <result column="APPLICANT_ID_TYPE" jdbcType="VARCHAR" property="applicantIdType" />
+    <result column="APPLICANT_ID_NUM" jdbcType="VARCHAR" property="applicantIdNum" />
+    <result column="INSURED_ID_TYPE" jdbcType="VARCHAR" property="insuredIdType" />
+    <result column="INSURED_ID_NUM" jdbcType="VARCHAR" property="insuredIdNum" />
+    <result column="AGENT_CODE" jdbcType="VARCHAR" property="agentCode" />
+    <result column="AGENT_NAME" jdbcType="VARCHAR" property="agentName" />
+    <result column="APPLICANT_NAME" jdbcType="VARCHAR" property="applicantName" />
+    <result column="INSURED_NAME" jdbcType="VARCHAR" property="insuredName" />
+    <result column="SELL_CHANNEL" jdbcType="VARCHAR" property="sellChannel" />
+    <result column="POLICY_NO" jdbcType="VARCHAR" property="policyNo" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from T_LX_INTEREST_RECORD_POLICY
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="model.InterestRecordPolicy">
+    insert into T_LX_INTEREST_RECORD_POLICY (ID, RECORD_ID, APPLICANT_ID_TYPE, 
+      APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+      AGENT_CODE, AGENT_NAME, APPLICANT_NAME, 
+      INSURED_NAME, SELL_CHANNEL, POLICY_NO
+      )
+    values (#{id,jdbcType=VARCHAR}, #{recordId,jdbcType=DECIMAL}, #{applicantIdType,jdbcType=VARCHAR}, 
+      #{applicantIdNum,jdbcType=VARCHAR}, #{insuredIdType,jdbcType=VARCHAR}, #{insuredIdNum,jdbcType=VARCHAR}, 
+      #{agentCode,jdbcType=VARCHAR}, #{agentName,jdbcType=VARCHAR}, #{applicantName,jdbcType=VARCHAR}, 
+      #{insuredName,jdbcType=VARCHAR}, #{sellChannel,jdbcType=VARCHAR}, #{policyNo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="model.InterestRecordPolicy">
+    update T_LX_INTEREST_RECORD_POLICY
+    set RECORD_ID = #{recordId,jdbcType=DECIMAL},
+      APPLICANT_ID_TYPE = #{applicantIdType,jdbcType=VARCHAR},
+      APPLICANT_ID_NUM = #{applicantIdNum,jdbcType=VARCHAR},
+      INSURED_ID_TYPE = #{insuredIdType,jdbcType=VARCHAR},
+      INSURED_ID_NUM = #{insuredIdNum,jdbcType=VARCHAR},
+      AGENT_CODE = #{agentCode,jdbcType=VARCHAR},
+      AGENT_NAME = #{agentName,jdbcType=VARCHAR},
+      APPLICANT_NAME = #{applicantName,jdbcType=VARCHAR},
+      INSURED_NAME = #{insuredName,jdbcType=VARCHAR},
+      SELL_CHANNEL = #{sellChannel,jdbcType=VARCHAR},
+      POLICY_NO = #{policyNo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select ID, RECORD_ID, APPLICANT_ID_TYPE, APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+    AGENT_CODE, AGENT_NAME, APPLICANT_NAME, INSURED_NAME, SELL_CHANNEL, POLICY_NO
+    from T_LX_INTEREST_RECORD_POLICY
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, RECORD_ID, APPLICANT_ID_TYPE, APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+    AGENT_CODE, AGENT_NAME, APPLICANT_NAME, INSURED_NAME, SELL_CHANNEL, POLICY_NO
+    from T_LX_INTEREST_RECORD_POLICY
+  </select>
+  <resultMap id="BaseResultMap" type="model.InterestRecordPolicy">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="RECORD_ID" jdbcType="DECIMAL" property="recordId" />
+    <result column="APPLICANT_ID_TYPE" jdbcType="VARCHAR" property="applicantIdType" />
+    <result column="APPLICANT_ID_NUM" jdbcType="VARCHAR" property="applicantIdNum" />
+    <result column="INSURED_ID_TYPE" jdbcType="VARCHAR" property="insuredIdType" />
+    <result column="INSURED_ID_NUM" jdbcType="VARCHAR" property="insuredIdNum" />
+    <result column="AGENT_CODE" jdbcType="VARCHAR" property="agentCode" />
+    <result column="AGENT_NAME" jdbcType="VARCHAR" property="agentName" />
+    <result column="APPLICANT_NAME" jdbcType="VARCHAR" property="applicantName" />
+    <result column="INSURED_NAME" jdbcType="VARCHAR" property="insuredName" />
+    <result column="SELL_CHANNEL" jdbcType="VARCHAR" property="sellChannel" />
+    <result column="POLICY_NO" jdbcType="VARCHAR" property="policyNo" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from T_LX_INTEREST_RECORD_POLICY
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="model.InterestRecordPolicy">
+    insert into T_LX_INTEREST_RECORD_POLICY (ID, RECORD_ID, APPLICANT_ID_TYPE, 
+      APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+      AGENT_CODE, AGENT_NAME, APPLICANT_NAME, 
+      INSURED_NAME, SELL_CHANNEL, POLICY_NO
+      )
+    values (#{id,jdbcType=VARCHAR}, #{recordId,jdbcType=DECIMAL}, #{applicantIdType,jdbcType=VARCHAR}, 
+      #{applicantIdNum,jdbcType=VARCHAR}, #{insuredIdType,jdbcType=VARCHAR}, #{insuredIdNum,jdbcType=VARCHAR}, 
+      #{agentCode,jdbcType=VARCHAR}, #{agentName,jdbcType=VARCHAR}, #{applicantName,jdbcType=VARCHAR}, 
+      #{insuredName,jdbcType=VARCHAR}, #{sellChannel,jdbcType=VARCHAR}, #{policyNo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="model.InterestRecordPolicy">
+    update T_LX_INTEREST_RECORD_POLICY
+    set RECORD_ID = #{recordId,jdbcType=DECIMAL},
+      APPLICANT_ID_TYPE = #{applicantIdType,jdbcType=VARCHAR},
+      APPLICANT_ID_NUM = #{applicantIdNum,jdbcType=VARCHAR},
+      INSURED_ID_TYPE = #{insuredIdType,jdbcType=VARCHAR},
+      INSURED_ID_NUM = #{insuredIdNum,jdbcType=VARCHAR},
+      AGENT_CODE = #{agentCode,jdbcType=VARCHAR},
+      AGENT_NAME = #{agentName,jdbcType=VARCHAR},
+      APPLICANT_NAME = #{applicantName,jdbcType=VARCHAR},
+      INSURED_NAME = #{insuredName,jdbcType=VARCHAR},
+      SELL_CHANNEL = #{sellChannel,jdbcType=VARCHAR},
+      POLICY_NO = #{policyNo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select ID, RECORD_ID, APPLICANT_ID_TYPE, APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+    AGENT_CODE, AGENT_NAME, APPLICANT_NAME, INSURED_NAME, SELL_CHANNEL, POLICY_NO
+    from T_LX_INTEREST_RECORD_POLICY
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, RECORD_ID, APPLICANT_ID_TYPE, APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+    AGENT_CODE, AGENT_NAME, APPLICANT_NAME, INSURED_NAME, SELL_CHANNEL, POLICY_NO
+    from T_LX_INTEREST_RECORD_POLICY
+  </select>
+  <resultMap id="BaseResultMap" type="model.InterestRecordPolicy">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="RECORD_ID" jdbcType="DECIMAL" property="recordId" />
+    <result column="APPLICANT_ID_TYPE" jdbcType="VARCHAR" property="applicantIdType" />
+    <result column="APPLICANT_ID_NUM" jdbcType="VARCHAR" property="applicantIdNum" />
+    <result column="INSURED_ID_TYPE" jdbcType="VARCHAR" property="insuredIdType" />
+    <result column="INSURED_ID_NUM" jdbcType="VARCHAR" property="insuredIdNum" />
+    <result column="AGENT_CODE" jdbcType="VARCHAR" property="agentCode" />
+    <result column="AGENT_NAME" jdbcType="VARCHAR" property="agentName" />
+    <result column="APPLICANT_NAME" jdbcType="VARCHAR" property="applicantName" />
+    <result column="INSURED_NAME" jdbcType="VARCHAR" property="insuredName" />
+    <result column="SELL_CHANNEL" jdbcType="VARCHAR" property="sellChannel" />
+    <result column="POLICY_NO" jdbcType="VARCHAR" property="policyNo" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from T_LX_INTEREST_RECORD_POLICY
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="model.InterestRecordPolicy">
+    insert into T_LX_INTEREST_RECORD_POLICY (ID, RECORD_ID, APPLICANT_ID_TYPE, 
+      APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+      AGENT_CODE, AGENT_NAME, APPLICANT_NAME, 
+      INSURED_NAME, SELL_CHANNEL, POLICY_NO
+      )
+    values (#{id,jdbcType=VARCHAR}, #{recordId,jdbcType=DECIMAL}, #{applicantIdType,jdbcType=VARCHAR}, 
+      #{applicantIdNum,jdbcType=VARCHAR}, #{insuredIdType,jdbcType=VARCHAR}, #{insuredIdNum,jdbcType=VARCHAR}, 
+      #{agentCode,jdbcType=VARCHAR}, #{agentName,jdbcType=VARCHAR}, #{applicantName,jdbcType=VARCHAR}, 
+      #{insuredName,jdbcType=VARCHAR}, #{sellChannel,jdbcType=VARCHAR}, #{policyNo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="model.InterestRecordPolicy">
+    update T_LX_INTEREST_RECORD_POLICY
+    set RECORD_ID = #{recordId,jdbcType=DECIMAL},
+      APPLICANT_ID_TYPE = #{applicantIdType,jdbcType=VARCHAR},
+      APPLICANT_ID_NUM = #{applicantIdNum,jdbcType=VARCHAR},
+      INSURED_ID_TYPE = #{insuredIdType,jdbcType=VARCHAR},
+      INSURED_ID_NUM = #{insuredIdNum,jdbcType=VARCHAR},
+      AGENT_CODE = #{agentCode,jdbcType=VARCHAR},
+      AGENT_NAME = #{agentName,jdbcType=VARCHAR},
+      APPLICANT_NAME = #{applicantName,jdbcType=VARCHAR},
+      INSURED_NAME = #{insuredName,jdbcType=VARCHAR},
+      SELL_CHANNEL = #{sellChannel,jdbcType=VARCHAR},
+      POLICY_NO = #{policyNo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select ID, RECORD_ID, APPLICANT_ID_TYPE, APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+    AGENT_CODE, AGENT_NAME, APPLICANT_NAME, INSURED_NAME, SELL_CHANNEL, POLICY_NO
+    from T_LX_INTEREST_RECORD_POLICY
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, RECORD_ID, APPLICANT_ID_TYPE, APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+    AGENT_CODE, AGENT_NAME, APPLICANT_NAME, INSURED_NAME, SELL_CHANNEL, POLICY_NO
+    from T_LX_INTEREST_RECORD_POLICY
+  </select>
+  <resultMap id="BaseResultMap" type="model.InterestRecordPolicy">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="RECORD_ID" jdbcType="DECIMAL" property="recordId" />
+    <result column="APPLICANT_ID_TYPE" jdbcType="VARCHAR" property="applicantIdType" />
+    <result column="APPLICANT_ID_NUM" jdbcType="VARCHAR" property="applicantIdNum" />
+    <result column="INSURED_ID_TYPE" jdbcType="VARCHAR" property="insuredIdType" />
+    <result column="INSURED_ID_NUM" jdbcType="VARCHAR" property="insuredIdNum" />
+    <result column="AGENT_CODE" jdbcType="VARCHAR" property="agentCode" />
+    <result column="AGENT_NAME" jdbcType="VARCHAR" property="agentName" />
+    <result column="APPLICANT_NAME" jdbcType="VARCHAR" property="applicantName" />
+    <result column="INSURED_NAME" jdbcType="VARCHAR" property="insuredName" />
+    <result column="SELL_CHANNEL" jdbcType="VARCHAR" property="sellChannel" />
+    <result column="POLICY_NO" jdbcType="VARCHAR" property="policyNo" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from T_LX_INTEREST_RECORD_POLICY
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="model.InterestRecordPolicy">
+    insert into T_LX_INTEREST_RECORD_POLICY (ID, RECORD_ID, APPLICANT_ID_TYPE, 
+      APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+      AGENT_CODE, AGENT_NAME, APPLICANT_NAME, 
+      INSURED_NAME, SELL_CHANNEL, POLICY_NO
+      )
+    values (#{id,jdbcType=VARCHAR}, #{recordId,jdbcType=DECIMAL}, #{applicantIdType,jdbcType=VARCHAR}, 
+      #{applicantIdNum,jdbcType=VARCHAR}, #{insuredIdType,jdbcType=VARCHAR}, #{insuredIdNum,jdbcType=VARCHAR}, 
+      #{agentCode,jdbcType=VARCHAR}, #{agentName,jdbcType=VARCHAR}, #{applicantName,jdbcType=VARCHAR}, 
+      #{insuredName,jdbcType=VARCHAR}, #{sellChannel,jdbcType=VARCHAR}, #{policyNo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="model.InterestRecordPolicy">
+    update T_LX_INTEREST_RECORD_POLICY
+    set RECORD_ID = #{recordId,jdbcType=DECIMAL},
+      APPLICANT_ID_TYPE = #{applicantIdType,jdbcType=VARCHAR},
+      APPLICANT_ID_NUM = #{applicantIdNum,jdbcType=VARCHAR},
+      INSURED_ID_TYPE = #{insuredIdType,jdbcType=VARCHAR},
+      INSURED_ID_NUM = #{insuredIdNum,jdbcType=VARCHAR},
+      AGENT_CODE = #{agentCode,jdbcType=VARCHAR},
+      AGENT_NAME = #{agentName,jdbcType=VARCHAR},
+      APPLICANT_NAME = #{applicantName,jdbcType=VARCHAR},
+      INSURED_NAME = #{insuredName,jdbcType=VARCHAR},
+      SELL_CHANNEL = #{sellChannel,jdbcType=VARCHAR},
+      POLICY_NO = #{policyNo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select ID, RECORD_ID, APPLICANT_ID_TYPE, APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+    AGENT_CODE, AGENT_NAME, APPLICANT_NAME, INSURED_NAME, SELL_CHANNEL, POLICY_NO
+    from T_LX_INTEREST_RECORD_POLICY
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, RECORD_ID, APPLICANT_ID_TYPE, APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+    AGENT_CODE, AGENT_NAME, APPLICANT_NAME, INSURED_NAME, SELL_CHANNEL, POLICY_NO
+    from T_LX_INTEREST_RECORD_POLICY
+  </select>
+  <resultMap id="BaseResultMap" type="model.InterestRecordPolicy">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="RECORD_ID" jdbcType="DECIMAL" property="recordId" />
+    <result column="APPLICANT_ID_TYPE" jdbcType="VARCHAR" property="applicantIdType" />
+    <result column="APPLICANT_ID_NUM" jdbcType="VARCHAR" property="applicantIdNum" />
+    <result column="INSURED_ID_TYPE" jdbcType="VARCHAR" property="insuredIdType" />
+    <result column="INSURED_ID_NUM" jdbcType="VARCHAR" property="insuredIdNum" />
+    <result column="AGENT_CODE" jdbcType="VARCHAR" property="agentCode" />
+    <result column="AGENT_NAME" jdbcType="VARCHAR" property="agentName" />
+    <result column="APPLICANT_NAME" jdbcType="VARCHAR" property="applicantName" />
+    <result column="INSURED_NAME" jdbcType="VARCHAR" property="insuredName" />
+    <result column="SELL_CHANNEL" jdbcType="VARCHAR" property="sellChannel" />
+    <result column="POLICY_NO" jdbcType="VARCHAR" property="policyNo" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from T_LX_INTEREST_RECORD_POLICY
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="model.InterestRecordPolicy">
+    insert into T_LX_INTEREST_RECORD_POLICY (ID, RECORD_ID, APPLICANT_ID_TYPE, 
+      APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+      AGENT_CODE, AGENT_NAME, APPLICANT_NAME, 
+      INSURED_NAME, SELL_CHANNEL, POLICY_NO
+      )
+    values (#{id,jdbcType=VARCHAR}, #{recordId,jdbcType=DECIMAL}, #{applicantIdType,jdbcType=VARCHAR}, 
+      #{applicantIdNum,jdbcType=VARCHAR}, #{insuredIdType,jdbcType=VARCHAR}, #{insuredIdNum,jdbcType=VARCHAR}, 
+      #{agentCode,jdbcType=VARCHAR}, #{agentName,jdbcType=VARCHAR}, #{applicantName,jdbcType=VARCHAR}, 
+      #{insuredName,jdbcType=VARCHAR}, #{sellChannel,jdbcType=VARCHAR}, #{policyNo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="model.InterestRecordPolicy">
+    update T_LX_INTEREST_RECORD_POLICY
+    set RECORD_ID = #{recordId,jdbcType=DECIMAL},
+      APPLICANT_ID_TYPE = #{applicantIdType,jdbcType=VARCHAR},
+      APPLICANT_ID_NUM = #{applicantIdNum,jdbcType=VARCHAR},
+      INSURED_ID_TYPE = #{insuredIdType,jdbcType=VARCHAR},
+      INSURED_ID_NUM = #{insuredIdNum,jdbcType=VARCHAR},
+      AGENT_CODE = #{agentCode,jdbcType=VARCHAR},
+      AGENT_NAME = #{agentName,jdbcType=VARCHAR},
+      APPLICANT_NAME = #{applicantName,jdbcType=VARCHAR},
+      INSURED_NAME = #{insuredName,jdbcType=VARCHAR},
+      SELL_CHANNEL = #{sellChannel,jdbcType=VARCHAR},
+      POLICY_NO = #{policyNo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select ID, RECORD_ID, APPLICANT_ID_TYPE, APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+    AGENT_CODE, AGENT_NAME, APPLICANT_NAME, INSURED_NAME, SELL_CHANNEL, POLICY_NO
+    from T_LX_INTEREST_RECORD_POLICY
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, RECORD_ID, APPLICANT_ID_TYPE, APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+    AGENT_CODE, AGENT_NAME, APPLICANT_NAME, INSURED_NAME, SELL_CHANNEL, POLICY_NO
+    from T_LX_INTEREST_RECORD_POLICY
+  </select>
+  <resultMap id="BaseResultMap" type="model.InterestRecordPolicy">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="RECORD_ID" jdbcType="DECIMAL" property="recordId" />
+    <result column="APPLICANT_ID_TYPE" jdbcType="VARCHAR" property="applicantIdType" />
+    <result column="APPLICANT_ID_NUM" jdbcType="VARCHAR" property="applicantIdNum" />
+    <result column="INSURED_ID_TYPE" jdbcType="VARCHAR" property="insuredIdType" />
+    <result column="INSURED_ID_NUM" jdbcType="VARCHAR" property="insuredIdNum" />
+    <result column="AGENT_CODE" jdbcType="VARCHAR" property="agentCode" />
+    <result column="AGENT_NAME" jdbcType="VARCHAR" property="agentName" />
+    <result column="APPLICANT_NAME" jdbcType="VARCHAR" property="applicantName" />
+    <result column="INSURED_NAME" jdbcType="VARCHAR" property="insuredName" />
+    <result column="SELL_CHANNEL" jdbcType="VARCHAR" property="sellChannel" />
+    <result column="POLICY_NO" jdbcType="VARCHAR" property="policyNo" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from T_LX_INTEREST_RECORD_POLICY
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="model.InterestRecordPolicy">
+    insert into T_LX_INTEREST_RECORD_POLICY (ID, RECORD_ID, APPLICANT_ID_TYPE, 
+      APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+      AGENT_CODE, AGENT_NAME, APPLICANT_NAME, 
+      INSURED_NAME, SELL_CHANNEL, POLICY_NO
+      )
+    values (#{id,jdbcType=VARCHAR}, #{recordId,jdbcType=DECIMAL}, #{applicantIdType,jdbcType=VARCHAR}, 
+      #{applicantIdNum,jdbcType=VARCHAR}, #{insuredIdType,jdbcType=VARCHAR}, #{insuredIdNum,jdbcType=VARCHAR}, 
+      #{agentCode,jdbcType=VARCHAR}, #{agentName,jdbcType=VARCHAR}, #{applicantName,jdbcType=VARCHAR}, 
+      #{insuredName,jdbcType=VARCHAR}, #{sellChannel,jdbcType=VARCHAR}, #{policyNo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="model.InterestRecordPolicy">
+    update T_LX_INTEREST_RECORD_POLICY
+    set RECORD_ID = #{recordId,jdbcType=DECIMAL},
+      APPLICANT_ID_TYPE = #{applicantIdType,jdbcType=VARCHAR},
+      APPLICANT_ID_NUM = #{applicantIdNum,jdbcType=VARCHAR},
+      INSURED_ID_TYPE = #{insuredIdType,jdbcType=VARCHAR},
+      INSURED_ID_NUM = #{insuredIdNum,jdbcType=VARCHAR},
+      AGENT_CODE = #{agentCode,jdbcType=VARCHAR},
+      AGENT_NAME = #{agentName,jdbcType=VARCHAR},
+      APPLICANT_NAME = #{applicantName,jdbcType=VARCHAR},
+      INSURED_NAME = #{insuredName,jdbcType=VARCHAR},
+      SELL_CHANNEL = #{sellChannel,jdbcType=VARCHAR},
+      POLICY_NO = #{policyNo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select ID, RECORD_ID, APPLICANT_ID_TYPE, APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+    AGENT_CODE, AGENT_NAME, APPLICANT_NAME, INSURED_NAME, SELL_CHANNEL, POLICY_NO
+    from T_LX_INTEREST_RECORD_POLICY
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, RECORD_ID, APPLICANT_ID_TYPE, APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+    AGENT_CODE, AGENT_NAME, APPLICANT_NAME, INSURED_NAME, SELL_CHANNEL, POLICY_NO
+    from T_LX_INTEREST_RECORD_POLICY
+  </select>
+  <resultMap id="BaseResultMap" type="model.InterestRecordPolicy">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="RECORD_ID" jdbcType="DECIMAL" property="recordId" />
+    <result column="APPLICANT_ID_TYPE" jdbcType="VARCHAR" property="applicantIdType" />
+    <result column="APPLICANT_ID_NUM" jdbcType="VARCHAR" property="applicantIdNum" />
+    <result column="INSURED_ID_TYPE" jdbcType="VARCHAR" property="insuredIdType" />
+    <result column="INSURED_ID_NUM" jdbcType="VARCHAR" property="insuredIdNum" />
+    <result column="AGENT_CODE" jdbcType="VARCHAR" property="agentCode" />
+    <result column="AGENT_NAME" jdbcType="VARCHAR" property="agentName" />
+    <result column="APPLICANT_NAME" jdbcType="VARCHAR" property="applicantName" />
+    <result column="INSURED_NAME" jdbcType="VARCHAR" property="insuredName" />
+    <result column="SELL_CHANNEL" jdbcType="VARCHAR" property="sellChannel" />
+    <result column="POLICY_NO" jdbcType="VARCHAR" property="policyNo" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from T_LX_INTEREST_RECORD_POLICY
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="model.InterestRecordPolicy">
+    insert into T_LX_INTEREST_RECORD_POLICY (ID, RECORD_ID, APPLICANT_ID_TYPE, 
+      APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+      AGENT_CODE, AGENT_NAME, APPLICANT_NAME, 
+      INSURED_NAME, SELL_CHANNEL, POLICY_NO
+      )
+    values (#{id,jdbcType=VARCHAR}, #{recordId,jdbcType=DECIMAL}, #{applicantIdType,jdbcType=VARCHAR}, 
+      #{applicantIdNum,jdbcType=VARCHAR}, #{insuredIdType,jdbcType=VARCHAR}, #{insuredIdNum,jdbcType=VARCHAR}, 
+      #{agentCode,jdbcType=VARCHAR}, #{agentName,jdbcType=VARCHAR}, #{applicantName,jdbcType=VARCHAR}, 
+      #{insuredName,jdbcType=VARCHAR}, #{sellChannel,jdbcType=VARCHAR}, #{policyNo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="model.InterestRecordPolicy">
+    update T_LX_INTEREST_RECORD_POLICY
+    set RECORD_ID = #{recordId,jdbcType=DECIMAL},
+      APPLICANT_ID_TYPE = #{applicantIdType,jdbcType=VARCHAR},
+      APPLICANT_ID_NUM = #{applicantIdNum,jdbcType=VARCHAR},
+      INSURED_ID_TYPE = #{insuredIdType,jdbcType=VARCHAR},
+      INSURED_ID_NUM = #{insuredIdNum,jdbcType=VARCHAR},
+      AGENT_CODE = #{agentCode,jdbcType=VARCHAR},
+      AGENT_NAME = #{agentName,jdbcType=VARCHAR},
+      APPLICANT_NAME = #{applicantName,jdbcType=VARCHAR},
+      INSURED_NAME = #{insuredName,jdbcType=VARCHAR},
+      SELL_CHANNEL = #{sellChannel,jdbcType=VARCHAR},
+      POLICY_NO = #{policyNo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select ID, RECORD_ID, APPLICANT_ID_TYPE, APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+    AGENT_CODE, AGENT_NAME, APPLICANT_NAME, INSURED_NAME, SELL_CHANNEL, POLICY_NO
+    from T_LX_INTEREST_RECORD_POLICY
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, RECORD_ID, APPLICANT_ID_TYPE, APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+    AGENT_CODE, AGENT_NAME, APPLICANT_NAME, INSURED_NAME, SELL_CHANNEL, POLICY_NO
+    from T_LX_INTEREST_RECORD_POLICY
+  </select>
+  <resultMap id="BaseResultMap" type="model.InterestRecordPolicy">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="RECORD_ID" jdbcType="DECIMAL" property="recordId" />
+    <result column="APPLICANT_ID_TYPE" jdbcType="VARCHAR" property="applicantIdType" />
+    <result column="APPLICANT_ID_NUM" jdbcType="VARCHAR" property="applicantIdNum" />
+    <result column="INSURED_ID_TYPE" jdbcType="VARCHAR" property="insuredIdType" />
+    <result column="INSURED_ID_NUM" jdbcType="VARCHAR" property="insuredIdNum" />
+    <result column="AGENT_CODE" jdbcType="VARCHAR" property="agentCode" />
+    <result column="AGENT_NAME" jdbcType="VARCHAR" property="agentName" />
+    <result column="APPLICANT_NAME" jdbcType="VARCHAR" property="applicantName" />
+    <result column="INSURED_NAME" jdbcType="VARCHAR" property="insuredName" />
+    <result column="SELL_CHANNEL" jdbcType="VARCHAR" property="sellChannel" />
+    <result column="POLICY_NO" jdbcType="VARCHAR" property="policyNo" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from T_LX_INTEREST_RECORD_POLICY
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="model.InterestRecordPolicy">
+    insert into T_LX_INTEREST_RECORD_POLICY (ID, RECORD_ID, APPLICANT_ID_TYPE, 
+      APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+      AGENT_CODE, AGENT_NAME, APPLICANT_NAME, 
+      INSURED_NAME, SELL_CHANNEL, POLICY_NO
+      )
+    values (#{id,jdbcType=VARCHAR}, #{recordId,jdbcType=DECIMAL}, #{applicantIdType,jdbcType=VARCHAR}, 
+      #{applicantIdNum,jdbcType=VARCHAR}, #{insuredIdType,jdbcType=VARCHAR}, #{insuredIdNum,jdbcType=VARCHAR}, 
+      #{agentCode,jdbcType=VARCHAR}, #{agentName,jdbcType=VARCHAR}, #{applicantName,jdbcType=VARCHAR}, 
+      #{insuredName,jdbcType=VARCHAR}, #{sellChannel,jdbcType=VARCHAR}, #{policyNo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="model.InterestRecordPolicy">
+    update T_LX_INTEREST_RECORD_POLICY
+    set RECORD_ID = #{recordId,jdbcType=DECIMAL},
+      APPLICANT_ID_TYPE = #{applicantIdType,jdbcType=VARCHAR},
+      APPLICANT_ID_NUM = #{applicantIdNum,jdbcType=VARCHAR},
+      INSURED_ID_TYPE = #{insuredIdType,jdbcType=VARCHAR},
+      INSURED_ID_NUM = #{insuredIdNum,jdbcType=VARCHAR},
+      AGENT_CODE = #{agentCode,jdbcType=VARCHAR},
+      AGENT_NAME = #{agentName,jdbcType=VARCHAR},
+      APPLICANT_NAME = #{applicantName,jdbcType=VARCHAR},
+      INSURED_NAME = #{insuredName,jdbcType=VARCHAR},
+      SELL_CHANNEL = #{sellChannel,jdbcType=VARCHAR},
+      POLICY_NO = #{policyNo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select ID, RECORD_ID, APPLICANT_ID_TYPE, APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+    AGENT_CODE, AGENT_NAME, APPLICANT_NAME, INSURED_NAME, SELL_CHANNEL, POLICY_NO
+    from T_LX_INTEREST_RECORD_POLICY
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, RECORD_ID, APPLICANT_ID_TYPE, APPLICANT_ID_NUM, INSURED_ID_TYPE, INSURED_ID_NUM, 
+    AGENT_CODE, AGENT_NAME, APPLICANT_NAME, INSURED_NAME, SELL_CHANNEL, POLICY_NO
+    from T_LX_INTEREST_RECORD_POLICY
+  </select>
+</mapper>
