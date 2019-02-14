@@ -1,6 +1,7 @@
 package model;
 
 public class InterestRecordPolicy {
+	
     private Long id;
 
     private Long recordId;
